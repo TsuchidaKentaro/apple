@@ -1,22 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES6",                     // コンパイル後のJavaScriptのバージョン
-    "module": "CommonJS",                // モジュールシステムの形式
-    "outDir": "./dist",                  // コンパイル後のJavaScriptファイルの出力先ディレクトリ
-    "strict": true,                      // 厳格な型チェック
-    "esModuleInterop": true,             // ESモジュールとCommonJSモジュールの相互運用性
-    "skipLibCheck": true,                // ライブラリの型チェックをスキップ
-    "forceConsistentCasingInFileNames": true,  // ファイル名の一貫性の強制
-    "resolveJsonModule": true,           // JSONモジュールの解決を有効化
-    "baseUrl": "./",                     // ルートディレクトリのベースパス
-    "paths": {
-      "*": ["node_modules/*", "src/types/*"]
-    }
+    "target": "ESNext",         // コンパイルする ECMAScript のバージョン
+    "module": "CommonJS",       // モジュールの出力形式
+    "outDir": "./dist",         // JavaScript ファイルの出力先ディレクトリ
+    "strict": true,             // 厳格な型チェックを有効にする
+    "esModuleInterop": true,    // ES モジュールと CommonJS モジュールの相互運用性を有効にする
+    "forceConsistentCasingInFileNames": true // ファイル名の大文字小文字の一貫性を強制する
   },
   "include": [
-    "src/**/*.ts"                       // コンパイル対象のファイルパターン
-  ],
-  "exclude": [
-    "node_modules"                      // コンパイル除外するディレクトリ
+    "src/**/*.ts"              // コンパイル対象の TypeScript ファイルのパターン
   ]
 }
