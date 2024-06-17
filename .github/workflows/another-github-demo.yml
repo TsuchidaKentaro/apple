@@ -1,15 +1,14 @@
-name: Another Workflow Example
-
+name: Another GitHub Actions Demo
 on:
   pull_request:
     branches:
       - main
 
 jobs:
-  test:
+  test-and-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Check out repository
+      - name: Checkout repository
         uses: actions/checkout@v2
 
       - name: Install dependencies
@@ -17,3 +16,8 @@ jobs:
 
       - name: Run tests
         run: npm test
+
+      - name: Deploy to staging
+        run: |
+          echo "Deploying to staging server..."
+          ssh user@staging-server 'bash -s' < deploy-script.sh
