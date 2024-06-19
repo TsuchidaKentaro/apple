@@ -1,0 +1,15 @@
+name: Kentaro Index Demo
+
+on:
+  push:
+    branches:
+      - kentaro-apple  # トリガーするブランチを指定します
+
+jobs:
+  kentaro3-index:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+

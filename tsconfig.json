@@ -1,0 +1,13 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",         // コンパイルする ECMAScript のバージョン
+    "module": "CommonJS",       // モジュールの出力形式
+    "outDir": "./dist",         // JavaScript ファイルの出力先ディレクトリ
+    "strict": true,             // 厳格な型チェックを有効にする
+    "esModuleInterop": true,    // ES モジュールと CommonJS モジュールの相互運用性を有効にする
+    "forceConsistentCasingInFileNames": true // ファイル名の大文字小文字の一貫性を強制する
+  },
+  "include": [
+    "src/**/*.ts"              // コンパイル対象の TypeScript ファイルのパターン
+  ]
+}
